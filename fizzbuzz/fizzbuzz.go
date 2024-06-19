@@ -1,5 +1,7 @@
 package fizzbuzz
 
+import "strconv"
+
 func FizzBuzz(n int) string {
 	switch {
 	case n%15 == 0:
@@ -9,6 +11,6 @@ func FizzBuzz(n int) string {
 	case n%5 == 0:
 		return "Buzz"
 	default:
-		return ""
+		return strconv.Itoa(n)
 	}
 }
