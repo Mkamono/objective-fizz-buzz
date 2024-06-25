@@ -9,6 +9,8 @@ type NumberConverter interface {
 	Run(n int) string
 }
 
+var _ NumberConverter = (*numberConverter)(nil)
+
 type numberConverter struct {
 	rules []ReplaceRule
 }
