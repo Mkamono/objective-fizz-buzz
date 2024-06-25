@@ -37,7 +37,7 @@ type passThroughRule struct {
 }
 
 func (r *passThroughRule) Match(carry string, n int) bool {
-	return true
+	return carry == ""
 }
 
 func (r *passThroughRule) Apply(carry string, n int) string {
