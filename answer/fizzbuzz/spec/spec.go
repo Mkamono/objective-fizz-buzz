@@ -7,7 +7,7 @@ import (
 )
 
 // 倍数のときに指定した文字列を追加するReplaceRule
-var _ core.ReplaceRule = &cyclicNumberRule{}
+var _ core.ReplaceRule = (*cyclicNumberRule)(nil)
 
 func NewCyclicNumberRule(divisor int, word string) *cyclicNumberRule {
 	return &cyclicNumberRule{divisor: divisor, word: word}
@@ -27,7 +27,7 @@ func (r *cyclicNumberRule) Apply(carry string, n int) string {
 }
 
 // 通常の数字をそのまま返すReplaceRule
-var _ core.ReplaceRule = &passThroughRule{}
+var _ core.ReplaceRule = (*passThroughRule)(nil)
 
 func NewPassThroughRule() *passThroughRule {
 	return &passThroughRule{}
