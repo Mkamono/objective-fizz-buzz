@@ -4,13 +4,13 @@ import (
 	"fmt"
 
 	"github.com/Mkamono/objective-fizz-buzz/answer/fizzbuzz/core"
-	"github.com/Mkamono/objective-fizz-buzz/answer/fizzbuzz/rule"
+	"github.com/Mkamono/objective-fizz-buzz/answer/fizzbuzz/spec"
 )
 
 func Main() {
-	fizzRule := rule.NewCyclicNumberRule(3, "Fizz")
-	buzzRule := rule.NewCyclicNumberRule(5, "Buzz")
-	passThroughRule := rule.NewPassThroughRule()
+	fizzRule := spec.NewCyclicNumberRule(3, "Fizz")
+	buzzRule := spec.NewCyclicNumberRule(5, "Buzz")
+	passThroughRule := spec.NewPassThroughRule()
 
 	fizzbuzzConverter := core.NewNumberConvter(
 		[]core.ReplaceRule{
