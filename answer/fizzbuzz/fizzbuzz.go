@@ -10,7 +10,7 @@ func FizzBuzz(n int) string {
 	buzzRule := spec.NewCyclicNumberRule(5, "Buzz")
 	passThroughRule := spec.NewPassThroughRule()
 
-	fizzbuzzConverter := core.NewNumberConvter([]core.ReplaceRule{
+	fizzbuzzConverter := core.NewNumberConverter([]core.ReplaceRule{
 		fizzRule,
 		buzzRule,
 		passThroughRule,

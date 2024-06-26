@@ -15,7 +15,7 @@ type numberConverter struct {
 	rules []ReplaceRule
 }
 
-func NewNumberConvter(rules []ReplaceRule) *numberConverter {
+func NewNumberConverter(rules []ReplaceRule) *numberConverter {
 	return &numberConverter{rules: rules}
 }
 
